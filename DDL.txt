@@ -1,0 +1,31 @@
+CREATE TABLE `employees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nik` varchar(10) NOT NULL,
+  `name` varchar(150) NOT NULL,
+  `date_of_birth` date NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `religion` varchar(20) NOT NULL,
+  `education` varchar(20) NOT NULL,
+  `martial_status` varchar(20) NOT NULL,
+  `work_date` date NOT NULL,
+  `worker_status` varchar(20) NOT NULL,
+  `division_id` int(11) NOT NULL,
+  `department_id` int(11) NOT NULL,
+  `grade_id` int(11) NOT NULL,
+  `level_id` int(11) NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `updated_at` datetime DEFAULT NULL,
+  `is_deleted` int(11) DEFAULT NULL,
+  `deleted_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+)
+
+hash password menggunakan bcrypt
